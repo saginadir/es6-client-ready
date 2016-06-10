@@ -1,0 +1,34 @@
+{
+  "name": "react-play",
+  "authors": [
+    "Sagi Nadir <saginadir@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "lodash": "^4.12.0"
+  },
+
+  "overrides": {
+    "jquery": {
+      "main": [
+        "dist/*"
+      ]
+    },
+    "lodash": {
+      "main": [
+        "dist/*"
+      ]
+    }
+  }
+}
