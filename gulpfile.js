@@ -29,12 +29,17 @@ gulp.task('es6', () => {
         .on('error',gutil.log)
         .bundle()
         .on('error',gutil.log)
+        .on('end', () => {console.log("ES6 Compiled!")})
         .pipe(source('app.js'))
         .pipe(gulp.dest('./public/js/src/'));
 });
 
 gulp.task('watch',() => {
-    gulp.watch('./public/js/src/**/*.js',['es6'])
+    gulp.watch([
+        './public/js/src/app/**/*.js',
+        './public/js/src/imports/**/*.js',
+        './public/js/vendor/**/*.js',
+    ],['es6'])
 });
 
 gulp.task('default', ['watch']);
